@@ -1,7 +1,60 @@
 .theme {
-	width: 200px;
-	height: 100px;
 	margin: 10px;
 	display: block;
-	background-color: lightblue;
+}
+
+body {
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f7f7f7+0,c6c6c6+57 */
+    background: rgb(247,247,247); /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover,  rgba(247,247,247,1) 0%, rgba(198,198,198,1) 57%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover,  rgba(247,247,247,1) 0%,rgba(198,198,198,1) 57%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center,  rgba(247,247,247,1) 0%,rgba(198,198,198,1) 57%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#c6c6c6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    text-align: center;
+    font-family: 'Abel', sans-serif;
+}
+
+#wrapper {
+    margin: 0 auto;   
+}
+
+.logo {
+    padding: 10px;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+/*BUTTONS*/
+/*
+.button-on {
+    margin: 5px;
+	background-color:#36b350;
+	display:inline-block;
+	color:#ffffff;
+    font-family: 'Abel', sans-serif;
+	font-size:17px;
+	width: 75px;
+    padding: 10px;
+	text-decoration:none;
+}
+.button-on:hover {
+	background-color:#5cbf2a;
+}
+.button-on:active {
+	position:relative;
+	top:1px;
+}
+*/
+
+h2 {
+    color: #5d5d5d;   
+    font-weight: normal;
+}
+
+p {
+    font-size: 20px; 
+    color: #5d5d5d;
 }

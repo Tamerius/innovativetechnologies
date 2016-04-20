@@ -25,7 +25,7 @@ void setup() {
 void loop() {  
   byte byteRead;
   if (Serial.available()) {
-    byteRead = Serial.read();
+    byteRead = Serial.readString();
     byteRead = byteRead-'0';
     theme = byteRead;    
   }

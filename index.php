@@ -16,33 +16,35 @@
 <!--<input type="checkbox" value="1" checked />-->
 
 <!--<input id="color" type="text" />-->
+<!--
 <div class='buttons'>
     <a href='#' class='button-on'><img src='img/on-button.png' alt='on-icon'/></a>&nbsp;
     <a href='#' class='button-off'><img src='img/off-button.png' alt='off-icon'/></a>&nbsp;
     <a href='#' class='button-auto'><img src='img/auto-button.png' alt='auto-icon'/></a>
     </div>
-        <h2>Kies je thema:</h2>
+-->
+    <h2>Kies je thema:</h2>
 <div class="theme" data-theme="1">
-    <p>Rainbow</p>
-  <img src='img/rainbow.png' />
+    <p>Light</p>
+  <img src='img/wit.png' />
 </div>
 <div class="theme" data-theme="2">
-    <p>Flashing</p>
-     <img src='img/flash.png' />
+    <p>Color cycle</p>
+     <img src='img/cycle.png' />
 </div>
 <div class="theme" data-theme="3">
-    <p>Random</p>
-    <img src='img/random.png' />
+    <p>Rainbow</p>
+    <img src='img/rainbow.png' />
 </div>
 <div class="theme" data-theme="4">
-    De epilepsie
+    Chase
+    <img src='img/chase.png' />
 </div>
 <div class="theme" data-theme="5">
-    De epilepsie - rainbow edition
+    Disco
+    <img src='img/disco.png' />
 </div>
-<div class="theme" data-theme="9">
-    Groen
-</div>
+
   </div>
 <script src="js/jquery-2.2.3.min.js"></script>
 <script src="js/jquery-ui.min.js"></script>

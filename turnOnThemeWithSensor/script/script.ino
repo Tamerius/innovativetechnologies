@@ -13,13 +13,17 @@ Adafruit_NeoPixel strip = Adafruit_NeoPixel(60, PIN, NEO_GRB + NEO_KHZ800);
 
 const int dark = 8;
 const int bright = 255;
-int theme = 2;
+int theme = 1;
 int luminance = 1023;
 
 void setup() {
   Serial.begin(9600);
   strip.begin();
   strip.show(); // Initialize all pixels to 'off'
+}
+
+bool isVeryDark() {
+  return luminance < 10;
 }
 
 void loop() {  
@@ -42,20 +46,26 @@ void loop() {
   luminance = analogRead(A0);
   Serial.println(luminance);
 
-  if (luminance > 300) { // IF: it's dark outside
+  if (luminance < 40) { // IF: it's dark outside
     switch (theme) {
       case 1: // Maximum lighting
-        lightUp((255, 255, 255));
+        if (isVeryDark())
+          lightUp(strip.Color(16, 32, 8));
+        else
+          lightUp(strip.Color(255, 128, 64));
         break;
-      case 2: // Circle animation
-        colorWipe(strip.Color(bright, bright, bright), 10);
-        colorWipe(strip.Color(dark, dark, dark), 40);
+      case 2: // 
+        if (isVeryDark())
+        colorWipe(strip.Color(32, 0, 0), 50);
+        colorWipe(strip.Color(0, 32, 0), 50);
+        colorWipe(strip.Color(0, 0, 32), 50);
         break;
       case 3: // 
-        rainbowCycle(20);
+        rainbowCycle(0);
         break;
-      case 4: //
-        theaterChase((127, 127, 127), 20);
+      case 4: // Circle animation
+        colorWipe(strip.Color(bright, bright, bright), 10);
+        colorWipe(strip.Color(dark, dark, dark), 40);
         break;
       case 5: //
         theaterChaseRainbow(20);
@@ -68,8 +78,8 @@ void loop() {
 }
 
 void lightUp(uint32_t c) {
-  for(uint16_t i=0; i<strip.numPixels(); i++) {
-      strip.setPixelColor(i, c);
+  for(uint16_t i=0; i<strip.numPixels() / 2; i++) {
+      strip.setPixelColor(i * 2, c);
       strip.show();
   }
 }
